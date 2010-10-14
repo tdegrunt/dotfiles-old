@@ -6,6 +6,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Load in stuff from etc/bash
+for arg in $( ls ~/.dotfiles/etc/bash/*.sh ); do
+  . $arg
+done
+
 # ==========
 # = Config =
 # ==========
@@ -22,14 +27,8 @@ export LC_CTYPE
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 export PROMPT_COMMAND
 
-PATH=/usr/local/Cellar/ruby/1.9.2-p0/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
-export PATH
-
 NODE_PATH=/usr/local/lib/node
 export NODE_PATH
-
-MAN_PATH=$MAN_PATH:/usr/local/Cellar/node/0.2.1/share/man
-export MAN_PATH
 
 force_color_prompt="Y"
 
@@ -86,26 +85,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-# ===========
-# = Aliases =
-# ===========
-
-# some more ls aliases
-alias ls='ls -G'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Reload bash (rebash)
-alias rebash='source $HOME/.bashrc'
-
-# Start screensaver
-alias ss="osascript -e 'tell application id \"com.apple.ScreenSaver.Engine\" to launch'"
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # ==============
 # = Completion =
