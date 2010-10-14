@@ -1,0 +1,64 @@
+" Pathogen - Bundle support
+call pathogen#runtime_append_all_bundles() 
+call pathogen#helptags()
+
+" Colors
+set background=dark
+colorscheme vividchalk
+
+filetype plugin indent on
+syntax on
+set nocompatible
+
+set whichwrap=b,s,h,l,<,>,[,] " Allow movement keys to wrap lines
+set backspace=indent,eol,start
+set hidden
+
+set smartindent
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+set number
+set cursorline
+
+set hlsearch
+set incsearch
+
+" autocompletion
+set wildmode=list:longest
+
+" folding
+set foldenable
+set foldmethod=syntax
+
+set splitbelow  " split windows below current window
+
+set fillchars=vert:\ ,fold:\ 
+
+" taglist settings
+let Tlist_Auto_Open = 1
+let Tlist_Use_Right_Window = 1
+
+" taglist
+map <leader>] :TlistToggle<cr>
+
+" NERDTree
+map <leader>[  :NERDTreeToggle<cr>
+
+" 2 line command line
+set ch=2
+
+" Maps
+nmap ,d :cd ~/Dropbox/Development<cr>:e.<cr>
+nmap <space> :
+
+" Change to folder of current buffer
+autocmd BufEnter * cd %:p:h
+
+" Automatically source .vimrc when I store it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+

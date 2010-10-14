@@ -1,0 +1,5 @@
+set go-=T
+set guifont:Mensch:h11
+
+set background=dark
+colorscheme vividchalk

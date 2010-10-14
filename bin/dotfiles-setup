@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# bash
+ln -sf ~/.dotfiles/etc/bashrc ~/.bashrc
+ln -sf ~/.dotfiles/etc/profle ~/.profile
+
+# vim
+ln -sf ~/.dotfiles/etc/vim/vimrc ~/.vimrc
+ln -sf ~/.dotfiles/etc/vim/gvimrc ~/.gvimrc
+ln -sf ~/.dotfiles/etc/vim ~/.vim
+ln -sf ~/.dotfiles/etc/vim/NERDTreeBookmarks ~/.NERDTreeBookmarks
+
+# git
+ln -sf ~/.dotfiles/etc/gitconfig ~/.gitconfig
