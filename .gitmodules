@@ -19,3 +19,12 @@
 [submodule "etc/vim/bundle/netrw"]
 	path = etc/vim/bundle/netrw
 	url = https://github.com/vim-scripts/netrw.vim.git
+[submodule "etc/vim/bundle/minibufexpl.vim"]
+	path = etc/vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "etc/vim/bundle/bufexplorer"]
+	path = etc/vim/bundle/bufexplorer
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "etc/vim/bundle/jade"]
+	path = etc/vim/bundle/jade
+	url = https://github.com/vim-scripts/jade.vim.git

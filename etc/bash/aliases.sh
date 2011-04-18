@@ -17,3 +17,6 @@ alias ss="osascript -e 'tell application id \"com.apple.ScreenSaver.Engine\" to 
 # Git
 alias gs="git status"
 
+# DNS
+alias flushdns="dscacheutil -flushcache"
+
