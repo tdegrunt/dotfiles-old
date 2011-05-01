@@ -67,3 +67,9 @@ set directory=/var/tmp
 
 " Change dir to current file
 set autochdir
+
+" Map ctrl-movement keys to window switching
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
