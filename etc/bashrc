@@ -15,7 +15,8 @@ done
 # = Config =
 # ==========
 
-EDITOR='mvim --nofork'
+#EDITOR='mvim --nofork'
+EDITOR='mate -w'
 export EDITOR
 
 # Use English as the language
